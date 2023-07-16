@@ -6,22 +6,17 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "http://https://artai-3dtshirt.com/"],
-    credentials: true,
-  })
-);
-app.use(express.json({ limig: "50mb" }));
+const corsOptions = {
+  origin: ['http://localhost:3000', 'https://artai-3dtshirt.com'],
+  credentials: true,
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+  methods: ['GET', 'POST'],
+}
+
+app.use(cors(corsOptions));
+app.use(express.json({ limit: "50mb" }));
 app.use("/dalle_image", dalleRoute);
 
 app.listen(8080, () => console.log("Server has started on port 8080"));
+
