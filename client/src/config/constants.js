@@ -26,7 +26,7 @@ export const FilterTabs = [
   },
   {
     name: "stylishShirt",
-    label: "No logo",
+    label: "Full design",
     icon: stylishShirt,
   },
 ];
