@@ -13,7 +13,7 @@ export const EditorTabs = [
   },
   {
     name: "aipicker",
-    label: "Create your design...",
+    label: "Ask AI for your desing...",
     icon: ai,
   },
 ];
