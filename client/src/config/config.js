@@ -7,4 +7,7 @@ const config = {
   },
 };
 
-export default config;
+const env = process.env.NODE_ENV || "development";
+const configEnv = config[env];
+
+export default configEnv;

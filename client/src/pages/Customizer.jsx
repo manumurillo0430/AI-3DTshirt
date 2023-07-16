@@ -56,7 +56,7 @@ const Customizer = () => {
       setGeneratingImg(true);
 
       const response = await axios.post(
-        config.development.backendUrl,
+        config.backendUrl,
         {
           prompt: prompt,
         },
@@ -64,7 +64,6 @@ const Customizer = () => {
           withCredentials: true,
         }
       );
-      console.log(response);
       handleDecals(type, `data:image/png;base64,${response.data.image}`);
     } catch (error) {
       alert(error);
