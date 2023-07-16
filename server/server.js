@@ -6,9 +6,18 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 app.use(
   cors({
-    origin: ["http://localhost:8080"],
+    origin: ["http://localhost:3000"],
     credentials: true,
   })
 );

@@ -1,0 +1,22 @@
+{
+  "name": "artfultshirt-byai",
+  "version": "1.0.0",
+  "description": "Artful T-shirt by AI",
+  "main": "index.js",
+  "scripts": {
+    "install:both": "npm --prefix server install && npm --prefix client install",
+    "start:both": "npm --prefix server start & npm --prefix client start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manumurillo0430/artai-3dtshirt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manumurillo0430/artai-3dtshirt/issues"
+  },
+  "homepage": "https://github.com/manumurillo0430/artai-3dtshirt#readme"
+}
