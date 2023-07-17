@@ -38,7 +38,7 @@ export const FilterTabs = [
   },
   {
     name: "download",
-    label: "Dowunload your design",
+    label: "Download your T-shirt",
     icon: download,
   },
 ];
