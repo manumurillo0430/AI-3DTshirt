@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSnapshot } from "valtio";
-
 import config from "../config/config";
 import state from "../store";
 import { download } from "../assets";
@@ -17,6 +16,7 @@ import {
   FilePicker,
 } from "../components";
 import { render } from "@react-three/fiber";
+
 const Customizer = () => {
   const snap = useSnapshot(state);
   const [file, setFile] = useState("");
@@ -153,7 +153,11 @@ const Customizer = () => {
                 label={tab.label}
                 isFilterTab
                 isActiveTab={activeFilterTab[tab.name]}
-                handleClick={() => handleActiveFilterTab(tab.name)}
+                handleClick={() => {
+                  if (tab.name === "download") {
+                    downloadCanvasToImage();
+                  } else handleActiveFilterTab(tab.name);
+                }}
               />
             ))}
           </motion.div>

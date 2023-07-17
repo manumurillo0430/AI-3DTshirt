@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
-
 import state from "../store";
 import { CustomButton } from "../components";
 import {
@@ -25,10 +24,10 @@ const Home = () => {
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <h1 className="head-text">
-              LET'S <br className="xl:block hidden" /> START
+              LET'S <br className="xl:block hidden" /> MAKE IT
             </h1>
           </motion.div>
-          <motion.div {...headContentAnimation} className="flex flex-col gap-5">
+          <motion.div {...headContentAnimation} className="flex flex-col gap-6">
             <p className="max-w-md font-normal text-gray-600 text-base">
               Design your distinct t-shirt with our state-of-the-art 3D
               customization tool.{" "}

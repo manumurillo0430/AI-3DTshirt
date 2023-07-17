@@ -1,4 +1,11 @@
-import { ai, logoShirt, stylishShirt, fileIcon, swatch } from "../assets";
+import {
+  ai,
+  logoShirt,
+  stylishShirt,
+  fileIcon,
+  swatch,
+  download,
+} from "../assets";
 
 export const EditorTabs = [
   {
@@ -28,6 +35,11 @@ export const FilterTabs = [
     name: "stylishShirt",
     label: "Full design",
     icon: stylishShirt,
+  },
+  {
+    name: "download",
+    label: "Dowunload your design",
+    icon: download,
   },
 ];
 
