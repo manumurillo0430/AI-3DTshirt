@@ -24,7 +24,8 @@ const Home = () => {
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <h1 className="head-text">
-              LET'S <br className="xl:block hidden" /> MAKE IT
+              FASHION,
+              <br className="xl:block hidden" /> AI-STYLE
             </h1>
           </motion.div>
           <motion.div {...headContentAnimation} className="flex flex-col gap-6">
