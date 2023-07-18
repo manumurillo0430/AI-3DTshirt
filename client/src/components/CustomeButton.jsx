@@ -1,4 +1,6 @@
 import React from "react";
+import { Spinner, Tooltip } from "@chakra-ui/react";
+
 import state from "../store";
 import { useSnapshot } from "valtio";
 import { getContrastingColor, getDarkerColor } from "../config/helpers";
@@ -49,7 +51,19 @@ export default function CustomButton({
         ":hover": generateHoverStyle(type),
       }}
       onClick={handleClick}>
-      {title}
+      {title === "Asking to AI..." ? (
+        <Tooltip
+          label="Please note that there may be a delay in our response time due to the server's response time."
+          hasArrow
+          placement="bottom">
+          <span>
+            {title}
+            {title === "Asking to AI..." && <Spinner size="xs" />}
+          </span>
+        </Tooltip>
+      ) : (
+        title
+      )}
     </button>
   );
 }
