@@ -12,10 +12,15 @@ To run the project locally, follow these steps:
 2. You will need obtain your OpenAI API key, please follow these steps:
 
    a. Log in to your OpenAI account at https://openai.com/.
+   
    b. Navigate to the API section.
+   
    c. Click on __Personal__ located at the top-right corner of the screen.
+   
    d. Select __View API keys__ from the dropdown menu.
+   
    e. In the API keys section, click on __+ Create new secret key__.
+   
    f. Create a new secret key and copy it for later use.
 
 3.In the root folder of your server, create a .env file. Inside the .env file, add the following line:
